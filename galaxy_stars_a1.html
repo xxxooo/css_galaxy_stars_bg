@@ -15,8 +15,37 @@
 
 	<div class="main">
 		<h1>Galaxy Stars</h1>
-		<p>CSS performance <a href="./galaxy_stars_a0.html">compare</a><br>
-			Clouds animaiton with transform matrix</p>
+		<p>CSS performance test</p>
+
+        <table>
+            <tr>
+                <td>
+                    <span>Stars twinkle</span>
+                </td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <div id="twinkleSwitch" class="slider"></div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Cloud flutter</span>
+                </td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <div id="flutterSwitch" class="slider"></div>
+                    </label>
+                </td>
+				<td>
+					<input type="radio" name="animation" value="bg-pos" checked> background-position<br>
+  					<input type="radio" name="animation" value="trans-matrix"> transform: matrix
+                </td>
+            </tr>
+        </table>
+
 	</div>
 </body>
 </html>

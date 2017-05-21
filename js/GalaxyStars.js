@@ -1,4 +1,4 @@
-﻿$().ready(function () {
+$().ready(function () {
     // Random Stars
     var generateStars = function () {
         var $galaxy = $(".galaxy"),
@@ -26,5 +26,19 @@
     $(window).resize(function () {
         if (restarTimeout) clearTimeout(restarTimeout);
         restarTimeout = setTimeout(generateStars, 666);
+    });
+
+    $('#twinkleSwitch').on('click',function () {
+        $('.galaxy').toggleClass('freeze');
+    });
+    $('#flutterSwitch').on('click',function () {
+        $('.clouds').toggleClass('freeze');
+    });
+    $('input[name="animation"]').on('change', function() {
+        $('.clouds').removeClass(
+            $('input[name="animation"]:not(:checked)').val()
+        ).addClass(
+            $(this).val()
+        );
     });
 })

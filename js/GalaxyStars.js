@@ -4,14 +4,14 @@ $().ready(function () {
         var $galaxy = $(".galaxy"),
             galaxyWidth = $galaxy.width(),
             galaxyHeight = $galaxy.height(),
-            starNumLimit = galaxyWidth * galaxyHeight / 2048;
+            starNumLimit = galaxyWidth * galaxyHeight / 1600;
 
         // clear all stars after resize
         $galaxy.empty();
         for (var i = 0; i < starNumLimit; i++) {
             var starType = Math.floor(Math.random() * Math.random() * 5),
                 twinkleType = Math.floor(Math.random() * 4),
-                delaySec = Math.random() * -8 + 's'
+                delaySec = Math.random() * -8 + 's';
 
             $('<div/>',{
                 class: 'star star-m'+ starType +' twinkle'+ twinkleType,
